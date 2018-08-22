@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	Capture = 그룹지정해서 사용 = 캡처 = 실질적 사례
+	*/
+	var pattern = /(\w+)\s(\w+)/;
+	/*https://regexper.com/ 
+	정규표현식 시각화 사이트에서 (\w+)\s(\w+) 검색해보자
+	1. (\w+)
+	첫번째 괄호() = group#1 
+	\w = 문자 = A~Z, a~z, 0~9
+	+ = 수량자 = 앞에 있는 문자가
+				하나 이상인 경우 이 패턴이 유효해진다
+				\w 이 # 일 경우 해당 안됨
+				\w 이 a 거나 AA 인 경우는 해당.
+	2.\s
+	\s = 공백 = 띄어쓰기
+	3. (\w+)
+	1번 과 같음 = group#2
+*/
+	var pattern = /(\w+)\s(\w+)/;
+	var str = "SBC everybody";
+	var result = str.replace(pattern, "$2, $1");
+	console.log(result);	
+	//everybody, SBC
+
+/*
+var result = str.replace(pattern, "$2, $1");
+//$2 = 두번째 그룹, $1 = 첫번째 그룹
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

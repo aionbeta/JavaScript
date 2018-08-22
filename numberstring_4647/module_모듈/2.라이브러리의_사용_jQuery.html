@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jQuery.js"></script>
+	<title></title>
+</head>
+<body>
+	<ul id="list">
+ 		<li>empty</li>
+ 		<li>empty</li>
+ 		<li>empty</li>
+ 		<li>empty</li>
+ 		<li>empty</li>
+ 	</ul>
+<!--
+  jQuery를 이용해서 버튼하나로 empty를
+  push yourself out of your comfort zone 으로 바꾸어 보자.
+--> 
+	<input type="button" value="execute" id="execute_btn"/>
+
+<script type="text/javascript">
+	$("#execute_btn").click(function(){
+		//클릭시 function 설정
+		$("#list li").text("push yourself out of your comfort zone");
+	})
+
+</script>
+
+</body>
+</html>

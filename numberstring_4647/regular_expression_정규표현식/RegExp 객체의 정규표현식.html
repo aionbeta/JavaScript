@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	작업의 대상 지정 -> 어떤 작업을 할것인가
+	*/
+
+	//정규표현식 리터럴
+	var pattern = /a/;
+
+	//정규표현식 객체 생성자
+	var pattern = new RegExp('a');
+
+
+ //정규펴헌식 method(메소드) 실행
+ //정규표현식을 compile 해서 object 를 만들었다면
+ //이제 문자열에서 원하는 문자를 찾아내야 한다.
+ //추출, test, 치환
+
+
+//1) 추출 = exec
+ 	var pattern = /a/;
+ 	pattern.exec('abcde');
+ 	//a 를 찾게 된다.
+ 	//["a"]
+
+ 	var pattern = /a./;
+ 	pattern.exec('abcde');
+ 	//a. 으로 바꾸면?
+ 	// . 은 하나의 문자이다. 그리고 . 앞에는 반드시 a가 있어야한다.
+ 	//["ab"]
+
+ 	var pattern = /a/;
+	pattern.exec('bcdef');
+	//null
+
+//2) test = test
+	pattern.test('abcde');
+	//test 사용시 return 값이 boolean 이 된다. 
+	true
+	pattern.test('bcde');
+	false
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

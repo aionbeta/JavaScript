@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+/*
+정규 표현식에서의 패턴
+*/
+
+	var urlPattern = /\b(?:https?)\/\/[a-z0-9-+&@#\/%?=~_|!:,.;]*/gim;
+	var content = "생활코딩 : https://opentutorials.org/course/1 입니다. 네이버 : https://naver.com 입니다. ";
+	var result = content.replace(urlPattern, function(url){
+		return "<a href="+url+">"+url+"</a>";
+	});
+	console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

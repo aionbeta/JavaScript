@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+	
+function Person(name){
+    this.name = name;
+}
+Person.prototype.name=null;
+Person.prototype.introduce = function(){
+    return 'My nickname is '+this.name; 
+}
+ 
+function Programmer(name){
+    this.name = name;
+}
+Programmer.prototype = new Person();
+Programmer.prototype.coding = function(){
+    return "hello world";
+}
+//20-22 까지의 coding 은 자식만의 것.
+ function Designer(name){
+    this.name = name;
+}
+Designer.prototype = new Person();
+Designer.prototype.design = function(){
+    return "beautiful!";
+}
+
+var p1 = new Programmer('egoing');
+document.write(p1.introduce()+"<br />");
+document.write(p1.coding()+"<br />");
+
+var p2 = new Designer('leezche');
+document.write(p2.introduce()+"<br />");
+document.write(p2.design()+"<br />");
+
+//person 이라는 공통의 부모
+//progammer, design 자식 객체는 상속 받고 자신만의 것도 있다.
+//결과
+
+
+My name is egoing
+hello world
+/*
+Programmer는 Person의 기능을 가지고 있으면서
+Person이 가지고 있지 않은 기능인 메소드 coding을 가지고 있다. 
+
+prototype이 무엇인가 궁금할 것이다.
+이번 시간은 상속에 대한 개념적인 부분만 살펴본 것이고
+다음 시간에 prototype에 대한 구체적으로 알아보자.
+*/
+
+
+
+
+	
+</script>
+
+</body>
+</html>

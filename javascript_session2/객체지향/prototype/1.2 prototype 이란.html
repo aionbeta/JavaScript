@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+
+prototype - 거물급 개념
+
+new 가 등판하면, 우항의 new 안의 객체가 좌항에 복사된다
+
+/*	
+이번 수업은 상속수업의 연장선상에 있다.
+상속의 구체적인 수단인 prototype에 대해서 자세히 알아보자.
+
+
+그럼 prototype이란 무엇인가?
+한국어로는 원형정도로 번역되는 prototype은,
+말 그대로 객체의 원형이라고 할 수 있다.
+함수는 객체다. 그러므로 생성자로 사용될 함수도 객체다.
+객체는 프로퍼티를 가질 수 있는데,
+prototype이라는 프로퍼티는 그 용도가 약속되어 있는 특수한 프로퍼티다.
+prototype에 저장된 속성들은 생성자를 통해서
+객체가 만들어질 때 그 객체에 연결된다.
+*/ 
+
+
+
+function Ultra(){}
+Ultra.prototype.ultraProp = true;
+
+function Super(){}
+Super.prototype = new Ultra();
+
+function Sub(){}
+Sub.prototype = new Super();
+
+var o = new Sub();
+console.log(o.ultraProp);
+//true
+
+
+
+
+//=========================================
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

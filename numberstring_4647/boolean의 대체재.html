@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	/* boolean의 대체재
+	
+	1. js에서 1은 true로 인식됨.
+		if(0){alert(1);}
+		undefined
+		if(1){alert(1);}
+		true
+
+	2. js에서 '' 빈문자열, undefined는 false로 인식됨.
+	
+	실행안됨
+		if(''){alert('빈문자열');}
+		undefined
+		if(undefined){alert('undefined');}
+		undefined
+	
+	실행됨
+		if('aionseo'){alert('빈문자열');}
+		
+	
+	! 때문에 3개 예제 전부 실행됨.
+		var a;  - a 값을 넣지 않았기에 undefined 즉 false
+		if(!a){alert('hi')}
+		if(!undefined){alert('hi')}
+		if(!NaN){alert('hi')}
+	
+
+</script>
+
+</body>
+</html>

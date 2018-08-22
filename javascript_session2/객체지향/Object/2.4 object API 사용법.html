@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+/*	
+또한 Object 객체를 확장하면 모든 객체가 접근할 수 있는 API를 만들 수 있다.
+아래는 Object 객체를 확장한 사례다.
+
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
+참고해 보기 
+
+*/
+
+//Object.keys()
+var arr = ["a", "b", "c"];
+console.log("Object.keys(arr)", Object.keys(arr));
+							  //Object.keys=function(){
+							  //Objecdt= 생성자 함수}
+//will alert "0,1,2"
+
+
+
+//console에서 해보기
+var o = {"name":"aionseo", "age":25, "city":"global"}
+//undefined
+o
+//{name: "aionseo", age: 25, city: "global"}
+
+Object.create(o);
+//{}
+Object.keys(o);
+//(3) ["name", "age", "city"]
+//key 값만 준다.
+
+//================================================
+
+//Object.prototype 의 객체는 모든 객체들의 부모이다.
+
+//Object.prototype.toString()
+var o = new Object();
+console.log("o.toString()", o.toString());
+
+var a = new Array(1,2,3);
+console.log("a.toString()", a.toString());
+						//Object.prototype.toString = function(){}
+						/*new Object();라는 객체를 만들고  prototype 이라고 하는
+						객체가 원형으로 한다.*/
+
+
+//console에서 해보기
+var o = {}
+//undefined
+o.toString();
+//"[object Object]"
+var a = [1,2,3];
+//undefined
+a.toString();
+//"1,2,3"
+
+	
+</script>
+
+</body>
+</html>

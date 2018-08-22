@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+
+
+메소드의 호출
+//객체의 소속인 메소드의 this는 그 객체를 가르킨다. 
+
+
+var o = {
+    func : function(){
+        if(o === this){
+            document.write("o === this");
+        }
+    }
+}
+o.func();   
+//결과
+o === this	
+
+
+
+
+
+</script>
+
+</body>
+</html>

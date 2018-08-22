@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	function get_members(){
+		return ["aionseo", "auclown", "nukelee"];
+	}		
+
+	var members = get_members();
+
+	//members 를 대문자로 출력하고 싶을때.
+	document.write(members[0]);
+	//members.toUpperCase(); 라고 하면된다.
+	members.toUpperCase();
+
+//===========================================
+	function get_members(){
+		return ["aionseo", "auclown", "nukelee"];
+	}	
+	
+	var members=get_members();	
+	
+	document.write(members[0].toUpperCase()+"<br />");
+	document.write(members[1].toUpperCase()+"<br />");
+	document.write(members[2].toUpperCase()+"<br />");
+	//위의 코드로 하면 대문자로 바꿀 수 있게된다.
+
+//============================================
+  /*
+  한명을 추가하거나 뺀다면?
+  오류가 나게된다. .toUpperCase() 에서 오류남
+  */
+  function get_members(){
+		return ["aionseo", "auclown", "nukelee"];
+	}	
+	
+	var members=get_members();	
+	
+	document.write(members[0].toUpperCase()+"<br />");
+	document.write(members[1].toUpperCase()+"<br />");
+	document.write(members[2].toUpperCase()+"<br />");
+
+	/*
+	(members.length); 라고 하게되면 배열안의 값이 나온다.
+	위의 경우는 3.
+	*/
+//=======================================================
+  function get_members(){
+		return ["aionseo", "auclown", "nukelee"];
+	}	
+	
+	var members=get_members();	
+	
+	//0, 1, 2 가 출력.
+	//members의 index값이 출력됨.
+	for(var i=0; i<3; i++){
+		document.write(members[i].toUpperCase()+"<br />");
+	}
+
+//======================================================
+//배열안에 "sbtest"를 추가해 보자.
+function get_members(){
+		return ["aionseo", "auclown", "nukelee", "sbtest"];
+	}	
+	
+	var members=get_members();	
+	
+	/*
+	members.legnth; 를 추가시키면
+	배열이 아무리 길어져도 순차적으로 출력된다!!
+	이경우에는 0 ~ 3.
+	*/
+	for(var i=0; i<members.length; i++){
+		document.write(members[i].toUpperCase()+"<br />");
+	}
+	/*
+	members.legth 로 제한을 두게되면
+	배열안의 값을 빼고 더해도 아무 상관이없다.
+	오류가 나지 않는다.
+	유지 보수, 수정이 쉽다!!
+	*/
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

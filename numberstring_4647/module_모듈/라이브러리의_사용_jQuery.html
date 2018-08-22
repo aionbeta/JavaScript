@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<script type="text/javascript" src="jQuery.js"></script>
+
+
+</head>
+<body>
+	<ul id="list">
+		<li>empty</li>
+		<li>empty</li>
+		<li>empty</li>
+		<li>empty</li>
+	</ul>
+
+<input type="button" value="execute" id="execute_btn"/>
+	<script type="text/javascript">
+		
+	/*
+	jQuery 에서는 모든명령어가 "$"로 시작된다.
+	# 은 id 값을 불러온다.
+	#list li 라고하면
+	id값이 list인 태그의 하위태그가 li인 태그를 선택하게 된다.
+	*/
+
+	$("#list li").text("push yourself out of your comfort zone");
+
+	//이제 empty가 "push yourself out of yoru comfort zone"로 바뀌게 된다.
+
+
+//버튼 하나로 바꾸고 싶다면 두번째 페이지의 예시를 보자.
+
+	</script>
+</body>
+</html>

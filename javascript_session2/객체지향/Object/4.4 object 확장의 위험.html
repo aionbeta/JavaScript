@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+
+
+//Object.prototype 의 method 는 모든 객체에 영향을 준다!!
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+console.log(o.contain("aionseo"));
+var a = ["aionseo", "egoing", "leezche"];
+console.log(a.contain("egoing"));
+
+
+for(var name in o){
+console.log(o[name]);
+}
+/*답은
+aionseo
+busan
+ƒ (needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+*/
+// contain 이란 이름의 method 도 var = o 안에 담겨있다.
+// aionseo busan 그리고 contain 이름의 method (함수).
+
+
+
+
+//=====================================================
+
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+var a = ["aionseo", "egoing", "leezche"];
+
+
+for(var name in o){
+console.log(name);
+}
+
+// name, city, contain
+
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+var a = ["aionseo", "egoing", "leezche"];
+
+
+for(var name in a){
+console.log(name);
+}
+//0, 1, 2, contain
+
+//====================================================
+.hasOwnProperty()
+// 전체값인 contain 을 제거하려면 ??
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+var a = ["aionseo", "egoing", "leezche"];
+
+
+for(var name in a){
+	if(a.hasOwnProperty(name)){
+	//a 가 name 이라는 Property 를 가지고 있나? (boolean)
+		console.log(name);
+	}
+}
+//0,1,2
+
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+var a = ["aionseo", "egoing", "leezche"];
+
+
+for(var name in o){
+	if(o.hasOwnProperty(name)){
+	//a 가 name 이라는 Property 를 가지고 있나? (boolean)
+		console.log(name);
+	}
+}
+//name, city 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===========================================================================
+수업 자체 설명 복붙
+
+/*
+그런데 Object 객체는 확장하지 않는 것이 바람직하다.
+왜냐하면 모든 객체에 영향을 주기 때문이다. 
+
+확장 후에 아래 코드를 실행해보자.
+*/
+
+for(var name in o){
+    console.log(name);  
+}
+/*
+결과
+name
+contain
+*/
+/*
+확장한 프로퍼티인 contain이 포함되어 있다.
+객체가 기본적으로 가지고 있을 것으로 예상하고 있는
+객체 외에 다른 객체를 가지고 있는 것은 개발자들에게 혼란을 준다.
+이 문제를 회피하기 위해서는 프로퍼티의
+해당 객체의 소속인지를 체크해볼 수 있는 hasOwnProperty를 사용하면 된다. 
+*/
+
+for(var name in o){
+    if(o.hasOwnProperty(name))
+        console.log(name);  
+}
+
+/*
+hasOwnProperty는 인자로 전달된 속성의 이름이
+객체의 속성인지 여부를 판단한다.
+만약 prototype으로 상속 받은 객체라면 false가 된다. 
+*/
+
+
+	
+</script>
+
+</body>
+</html>

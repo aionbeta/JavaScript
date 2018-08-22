@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//함수가 없다면?
+	var i = 0;
+	while(i<10){
+		document.write(i);
+		i += 1;
+	}
+	//0~9 까지 출력하는 코드, 반복된다면 복붙
+
+	function numbering(){
+		var i = 0;
+		while(i<10){
+			document.write(i);
+			i += 1;
+		}
+	}
+
+	numbering();
+	//i(); 만 복붙하면 됨
+	//만약 1000번이라면 for 사용하기 
+	function numbering(){
+		var i = 0;
+		while(i<10){
+			document.write(i+"<br />");
+			i += 1;
+		}
+	}
+	for(var i=0; i<1000; i+=1){
+		numbering();
+	}
+	//혹은 그냥 위 함수를 for안에 그대로 넣어도 된다.
+
+	for(var i=0; i<1000; i+=1){
+		var i = 0;
+		while(i<10){
+			document.write(i+"<br />");
+			i += 1;
+		}
+	}
+
+	/* 함수의 효용
+		-반복적 실행되는 로직이 반복될때
+		-어디에서나 재사용 될 수 있음
+		-유지보수의 용이
+		-코드의 가독성
+		-재사용성
+		-수정하기 쉽다
+		-버그가 발생하면 쉽게 수정
+		-프로그래밍의 핵심이다.
+
+		반복문의 효용
+		-즉각적인 자리에서 반복될때
+
+	*/	
+
+
+
+	</script>
+
+</body>
+</html>

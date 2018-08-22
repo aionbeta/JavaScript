@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script>
+/* node.js에서의 모듈
+
+	node.demo.js = 로드의 주체 = 파일을 읽어오는 쪽
+	node.circle.js = 로드될 대상 = 파일을 읽음 당하는 쪽 = 예제에서의 welcome
+
+
+
+	1.node.circle.js (읽을 대상)
+	var PI = Math.PI;
+
+	exports.area = function (r) {
+	return PI * r * r;
+	};
+
+	exports.circumference = function (r) {
+	return 2 * PI * r;
+	};
+
+
+
+
+	2.node.demo.js (읽어오는 쪽)
+		var circle = require("./node.circle.js");
+		console.log("the area of a circle of radius 4 is"
+					+ circle.area(4));
+
+
+	-출력 결과
+	F:\BitNami\wampstack-5.4.22-0\apache2\htdocs\javascript\module>node node.demo.js
+	The area of a circle of radius 4 is 50.26548235743669
+
+
+*/
+</script>
+
+</body>
+</html>

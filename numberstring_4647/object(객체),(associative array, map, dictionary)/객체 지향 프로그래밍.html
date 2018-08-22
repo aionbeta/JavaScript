@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+	//값으로서의 함수는 객체안에 저장 가능하다.
+	 var grades = {
+	 	"list" : {"ainseo":10, "auclown":8, "sbtest":80},
+	 	"show" : function(){
+	 		alert("hello world!");
+	 	}
+	 }
+	 grades["show"]();
+
+//========================================================
+/*
+this 키워드 = 약속되어있는 변수
+*/
+	 var grades = {
+	 	"list" : {"ainseo":10, "auclown":8, "sbtest":80},
+	 	"show" : function(){
+	 		console.log(this.list);
+	 		//이 객체가 가지고 있는 "list" 실행하게 됨.
+	 	}
+	 }
+	 grades["show"]();
+
+//alert, prompt, document.write 하면 object 떠서 console.log 사용함.
+//ainseo: 10, auclown: 8, sbtest: 80
+//========================================================
+	 var grades = {
+	 	//grades 라는 객체안에 "list"와 "show"를 그룹으로 넣음.
+	 	//"객체지향프로그래밍"" - 서로 연관된 데이터의 그룹핑 처리
+	 		 	"list" : {"ainseo":10, "auclown":8, "sbtest":80},
+	 	"show" : function(){
+	 		for(var name in this.list){
+	 			console.log(name, this.list[name]);
+	 		}
+	 	}
+	 }
+	 grades["show"]();
+	 /*grades.show();
+	 = grades["show"]();
+	 */
+
+//ainseo 10 auclown 8 sbtest 80
+
+
+
+</script>
+
+
+</body>
+</html>

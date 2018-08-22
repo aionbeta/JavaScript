@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+	
+
+//어떤 취지의 기능인지 먼저 설계하고 그다음에 원리를 보자.
+
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+console.log(o.contain("aionseo"));
+var a = ["aionseo", "egoing", "leezche"];
+console.log(a.contain("egoing"));
+//true
+
+
+//===========================================
+
+Object.prototype.contain = function(needle){
+	for(var name in this){
+		if(this[name] === needle){
+			return true;
+		}
+	}
+	return false;
+}
+
+var o = {"name":"aionseo", "city":"busan"}
+console.log(o.contain("dennis"));
+//dennis 가 var o 안에 담겨 있지 않기 때문에 
+var a = ["aionseo", "egoing", "leezche"];
+console.log(a.contain("egoing"));
+//false
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

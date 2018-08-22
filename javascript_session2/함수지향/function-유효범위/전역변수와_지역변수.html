@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+/*
+함수 = 모듈화 = 재사용하기 용이함. javascript = 함수형언어
+
+scope = 유효범위 = 변수의 수명 
+
+local variables = 지역변수
+global variables = 전역변수
+*/
+
+	var vscope = "global";
+		function fscope(){
+			alert(vscope);
+		}
+	fscope();
+/*
+	global - 중괄호 밖에
+	= global variable = 전역변수
+*/
+
+
+	var vscope = "global";
+		function fscope(){
+			var vscope = "local";
+			alert(vscope);
+		}
+	fscope();
+/*
+	local - 같은 함수 안에 정의되어 있는 vscope 우선 - 중괄호 안에
+	=local variable = 지역변수
+*/
+
+//============================================================
+	var vscope = "global";
+	function fscope(){
+			alert(vscope);
+		}
+	function fscope2(){
+			alert(vscope);
+		}
+	fscope();
+	fscope2();
+/*
+	global 
+	global
+*/
+	var vscope = "global";
+		function fscope(){
+			var vscope = "local";
+			var lv = "local variables";
+			alert(lv);
+		}
+	fscope();
+	//local variables
+	alert(lv);
+	//undefined - 함수 안에 var lv 가 있어서 undefined.
+
+//=========================================================
+
+	var vscope = "global";
+		function fscope(){
+			var vscope = "local";
+		}
+	fscope();
+	alert(vscope);
+/*
+global
+	-var vscope = "local"이
+	function fscope 안에 있으면
+	지역변수 이다.
+*/
+
+	var vscope = "global";
+		function fscope(){
+			vscope = "local";
+		}
+	fscope();
+	alert(vscope);
+/*
+local
+	-vscope = "local"이
+	function fscope 안에 있으면
+	전역변수 이다.
+*/
+	var vscope = "global";
+		function fscope(){
+			var vscope = "local";
+			vscope = "local";
+		}
+	fscope();
+	alert(vscope);
+/*
+global
+	var vscope="local"이
+	function fscope 안에 이미 있기 때문에
+	vscope="local"은
+	지역변수로 할당한다.
+*/
+//=============================================
+
+/*
+	전역변수를 왜 사용해야하는 지 분명한 이유가 없으면
+	언제나 "지역변수"를 사용하여야 한다.
+	- 프로그래밍은 작은것에서 큰것으로 
+					간단한것에서 복잡한 것으로
+						발전하게 되어 있다.
+	코드 수정/보완시 var 이름에서 지역변수를 설정해야 할때
+	전역변수로 인해 크게 방해 받을 수 있다.
+
+	언제나 var를 설정하자.
+	var를 함수 밖에서 실행하면 전역변수가 된다.
+	var를 함수 안에서 실행하면 지역변수가 된다.
+
+
+</script>
+
+
+</body>
+</html>

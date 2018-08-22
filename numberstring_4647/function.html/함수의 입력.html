@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	// argument = arg = 입력
+
+	function get_argument(arg){
+		return arg;
+	}
+
+	alert(get_argument(1));
+	//arg는 1 이라는 변수가 된다.
+	//arg = 1;
+	alert(get_argument(2));
+	//arg는 2 라는 변수가 된다.
+	//arg = 2;
+
+	//=================================
+
+	function get_argument(arg){
+		return arg*1000;
+	}
+
+	alert(get_argument(1));
+	// 1 * 1000 = 1000
+	alert(get_argument(2));
+	// 2 * 1000 = 2000
+
+
+//==============================================
+	function get_argument(arg){
+	//arg = parameter = 매개변수
+		return arg;
+	}
+
+	alert(get_argument(1));
+	//1 = argument = 인자
+	alert(get_argument(2));
+	//2 = argument = 인자
+
+//============================================
+
+	//1.arg = 입력 값은 여러개 가능.
+	//2.return 값은 하나만.
+	function get_arguments(arg1, arg2){
+		return arg1 +arg2;
+	}
+
+	alert(get_arguments(10, 20));
+	alert(get_arguments(20, 30));
+
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--html 로 목록만들기-->
+<ul>
+	<li>aionseo</li>
+	<li>americano</li>
+	<li>lemontea</li>
+</ul>
+
+
+	<script type="text/javascript">
+	var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+		for(key in grades) {
+    	document.write("key : "+key+" value : "+grades[key]+"<br />");
+	}
+
+//또는,
+
+	var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+		for(var name in grades) {
+    	document.write("key : "+name+" value : "+grades[name]+"<br />");
+	}
+
+
+/*================================================
+	javascript 로 목록도 만들어 보자.
+*/
+
+
+var grades = {'egoing': 10, 'k8805': 6, 'sorialgi': 80};
+		for(var name in grades) {
+    	document.write("<li>key : "+name+" value : "+grades[name]+"<br />""</li>");
+	}
+
+
+
+
+
+</script>
+
+</body>
+</html>

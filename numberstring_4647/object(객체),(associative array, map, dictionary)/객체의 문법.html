@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	
+	/*
+	배열은 0,1,2,3 으로 표시되지만 
+	객체는 원하는 이름을 붙일 수 있다.
+ 	*/
+
+ 	var grades = {"aionseo":10, "auclown":6, "sbtest":80};
+ 	    //         key   :value
+
+//=======================================================
+	var grades = {};
+	grades["aionseo"] = 10;
+	grades["auclown"] = 6;
+	grades["sbtest"] = 80;
+
+	//or
+
+	var grades = new Object ();
+	grades["aionseo"] = 10;
+	grades["auclwon"] = 6;
+	grades["sbtest"] = 80;
+	
+	/* new Object (); = {};
+	같은의미
+	*/
+	var grades = {"aionseo":10, "auclown":6, "sbtest":80};
+	//불러올때는 
+	grades["aionseo"]; //혹은 grades["aion"+"seo"] - 문자로 여김
+	grades.aionseo;
+
+
+	</script>
+
+</body>
+</html>

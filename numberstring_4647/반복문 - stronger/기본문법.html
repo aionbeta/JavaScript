@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	/*	반복문 - the core of the programing.
+				make the software stronger.
+
+		반복문 = loop, iterate
+		
+		while 과 for 
+
+	1.while
+
+		while(조건, boolean){
+		반복해서 실행할 코드
+		}
+	조건이 true 에서 false 가 될때까지 코드가 반복됨.
+
+	*/
+
+	while(true){
+		document.write("Coding everybody <br/>");
+	}
+	
+	/* 위 코드는 "무한루프"가 된다.
+		"unlimited loop"
+		프로그램에서 발생하기 쉽고 심각한 문제가 된다.
+	*/
+	var i = 0;
+	while(i < 10){
+		document.write("Coding everybody "+i+"<br/>");
+		i = i + 1;
+	}
+	/* 위 코드는 제어가 가능하다.
+		프로그램에서는 0 부터 숫자를 세기 시작한다.
+
+	*/
+	
+//==============================================
+
+	
+	var i = 0;
+	while(i < 10){
+		document.write("Coding everybody "+i+"<br/>");
+		i = i + 1;
+
+	/*
+	 while 에서는 문제점이 있다.
+		
+		var i = 0;
+		i 라는 변수를 초기화 하는 부분
+		- 변수 초기화.
+
+		i = i + 1
+		i 값을 갱신해주는 - 반복실행.
+
+		i < 10
+		반복을 계속 진행할것이냐 - 반복조건.
+
+=============================================
+	
+	2.for
+		for 로 바꾸어 보자.
+	var i = 0;
+	while(i < 10){
+		document.write("Coding everybody "+i+"<br/>");
+		i = i + 1;
+
+   	*/
+	var i = 0;
+	while(i < 10){
+		document.write("Coding everybody "+i+"<br/>");
+		i = i + 1;
+	}
+
+	for(var i = 0; i < 10; i = i + 1;/*끝에 ; 사용하지 말것*/){
+		document.write("Coding everybody "+i+"<br/>");
+		}
+
+	//for 의 완성.
+	for(var i = 0; i < 10; i = i + 1){
+		document.write("Coding everybody "+i+"<br/>");
+		}
+
+	/* i = 1 + 1;
+	 	을 좀더 쉽게 만들어보면
+		i++;
+		++i;
+		로 바꾸어 쓸 수 있다. 
+
+		i++;
+		i가 실행된 후 1이 증가한다.
+
+		++i;
+		i가 실행될 때 1이 증가한다.
+
+		*/
+	for(var i = 0; i < 10; i++){
+		document.write("Coding everybody "+i+"<br/>");
+		}
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

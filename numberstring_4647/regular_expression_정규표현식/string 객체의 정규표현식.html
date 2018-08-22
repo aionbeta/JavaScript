@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*
+	문자열 메소드 실행 
+	문자열 객체의 몇몇 메소드는 정규표현식을 사용할 수 있다.
+
+	1. string.match();
+	RegExp.exec();와 비슷하다.
+	*/
+	var pattern = /a/;
+	console.log("abcdef".match(pattern));
+	// ["a"]
+	console.log("bcdefg".match(pattern));
+	// null
+
+
+	var str = "abcdef";
+	str.match(pattern);
+	//["a"]
+	var str = "bcdef";
+	str.match(pattern);
+	//null
+
+//====================================================
+
+	/*
+	2. 치환 = string.replace();
+	*/
+	var pattern = /a/;
+	console.log("abcdef".replace(pattern, "A"));
+	//Abcdef
+
+	var str = "abcdef";
+	str.replace(pattern, "A");
+	//"Abcdef"
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>

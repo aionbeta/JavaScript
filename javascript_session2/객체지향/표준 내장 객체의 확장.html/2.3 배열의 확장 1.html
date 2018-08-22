@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+/*
+배열을 확장해보자.
+아래 코드는 배열에서 특정한 값을 랜덤하게 추출하는 코드다. 
+*/
+var arr = new Array("seoul", "new york", "ladarkh", "busan", "tsukuba")
+					//0 ,		1,			2,			3,		4
+function getRandomValueFromArray(arr){
+	var index = Math.floor(arr.length*Math.random());
+	return arr[index];
+}
+console.log(getRandomValueFromArray(arr));
+
+
+
+
+/*
+이렇게 작성해도 된다! 잘못한 것이 아니다.
+하지만 조금 더 세련된 방법은 이 함수를 배열 객체에 포함시키는 것이다.
+그렇게하면 마치 배열에 내장된 메소드인 것처럼 위의 기능을 사용할 수 있다.
+*/
+
+
+
+
+	
+</script>
+
+</body>
+</html>

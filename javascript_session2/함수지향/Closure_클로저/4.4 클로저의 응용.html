@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+	
+
+1	var arr = []
+2	for(var i = 0; i < 5; i++){
+3	    arr[i] = function(){
+4	        return i;
+5	    }
+6	}
+7	for(var index in arr) {
+8	    console.log(arr[index]());
+9	}
+
+/*
+함수가 함수 외부의 컨텍스트에 접근할 수 있을 것으로
+기대하겠지만 위의 결과는 아래와 같다.
+*/
+1	5
+2	5
+3	5
+4	5
+5	5
+
+
+
+
+/*==================================================
+위의 코드는 아래와 같이 변경해야 한다.
+*/
+
+1	var arr = []
+2	for(var i = 0; i < 5; i++){
+3	    arr[i] = function(id) {
+4	        return function(){
+5	            return id;
+6	        }
+7	    }(i);
+8	}
+9	for(var index in arr) {
+10    console.log(arr[index]());
+11	}
+
+
+/*결과는 아래와 같다.
+
+1	0
+2	1
+3	2
+4	3
+5	4
+*/
+
+
+
+
+
+
+
+
+/*
+입문단계, 초급 개발자는 알 필요가 없지만,
+
+중급, 혹은 고급 개발자가 되기 위해서는 반드시 closure 를 익혀야 한다.
+*/
+
+
+</script>
+
+</body>
+</html>

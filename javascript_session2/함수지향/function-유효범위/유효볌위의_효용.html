@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body><script type="text/javascript">
+/*
+유효범위의 필요성
+- 지역변수를 사용해야 하는 이유
+*/
+
+function a (){
+	var i = 0;
+}	
+for(var i = 0; i<5; i++){
+	a();
+	document.write(i);
+}
+//1234
+
+
+function a (){
+	i = 0;
+	//i 는 전역변수
+}	
+for(var i = 0; i<5; i++){
+	//i 는 전역변수
+	a();
+	//i 가 계속 0으로 리셋되기 때문에 무한루프 - infinite loop
+	document.write(i);
+}
+//브라우저 다운
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

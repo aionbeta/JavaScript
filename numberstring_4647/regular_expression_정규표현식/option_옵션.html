@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+	/* option = 옵션
+	i 붙이면 대소문자 구분 안한다.
+	*/
+	var xi = /a/;
+	console.log("Abcde".match(xi));
+	//null
+	var xi = /a/i;
+	console.log("Abcde".match(xi));
+	//"A"
+	
+	var xi = /a/;
+	var aionseo = "Abcde";
+	aionseo.match(xi);
+	//null
+	var xi = /a/i;
+	var aionseo = "Abcde";
+	aionseo.match(xi);
+	//"A"
+
+
+//========================================================
+	/*
+	g 붙이면 전부 찾아준다.
+	*/
+	var xi = /a/;
+	var aionseo = "abcdeaaaaaaaaa";
+	aionseo.match(xi);
+	//"a"
+
+	var xi = /a/g;
+	var aionseo = "abcdeaaaa";
+	aionseo.match(xi);
+	//(5) ["a", "a", "a", "a", "a"]
+
+//============================================
+
+	/*
+	두개 다쓰기 가능? 가능
+	*/
+	var xi = /a/gi;
+	var aionseo = "AbcdeaAaA";
+	aionseo.match(xi);
+	//(5) ["A", "a", "A", "a", "A"]
+
+
+	</script>
+
+</body>
+</html>

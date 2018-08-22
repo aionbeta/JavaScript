@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/* & = 논리연산자
+		& = and
+		
+		둘다 ture 여아 실행.
+
+		1.실행됨
+		if(true && true) {
+			alert(1);
+		}
+		2.실행안됨
+		if(true && false){
+			alert(2);
+		}
+	*/
+		var id = prompt('Input your ID');
+		var password = prompt('input your password');
+		if(id==="aionseo" && password === 'servicebank'){
+			alert('Iogged-in Successfully.'+'\n'+
+				'Welcome back'+' '+"'"+id+"'"+'.')
+			} else {	
+				alert('ID or password is not matched our database.')
+			}
+			 
+
+	/*
+		or 연산자
+		|| = pipe = or
+		
+		둘중 하나만 true 면 실행됨.
+
+		1.실행됨
+		if(true || true){
+		alert(1);
+		}
+		2.실행됨
+		if(true || false){
+		alert(2);
+		}
+		3.실행 안됨
+		if(false || false){
+		alert(3);
+		}
+	*/
+		var id = prompt('Input your ID.');
+		var password = prompt('Input your password.');
+		if ((id === "aionseo" || id === "jimpark" || id === 'auclown') && password === "servicebank"){
+			alert('Verified.');
+		} else {
+			alert('ID or password is not matched.');
+		}
+
+
+	/* ! = not연산자 = boolean 의 값을 역전시킨다.
+
+		1.실행안됨
+		if(!true && !true){
+		alert(1);
+		}
+		2.실행됨
+		if(!false && !false){
+		alert(2);
+		}
+
+	
+
+
+</script>
+</body>
+</html>
